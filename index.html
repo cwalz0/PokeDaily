@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokémon Compare</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Pokédaily</h1>
+  <div class="score">
+  Score: <span id="score-current">0</span>
+  &nbsp;|&nbsp;
+  Best: <span id="score-best">—</span>
+</div>
+
+  <div class="bar">
+    <input id="guess-input" placeholder="Enter Pokémon name…" />
+  </div>
+
+  <table class="guess-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Types</th>
+        <th>Generation</th>
+      </tr>
+    </thead>
+    <tbody id="guess-body">
+      <!-- JS appends rows here -->
+    </tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* basic page */
+body { font-family: system-ui, sans-serif; margin: 20px; background: #fafafa; }
+.bar { display: flex; gap: 10px; align-items: center; }
+#guess-input { padding: 8px; font-size: 14px; width: 260px; content: center; }
+button { padding: 8px 12px; }
+
+h1 {
+  margin: 0 0 12px;
+  text-align: center;   /* center the title */
+}
+.score {
+  margin: 0 0 12px;
+  text-align: center;   /* center the title */
+}
+
+
+.bar {
+  display: flex;
+  justify-content: center;  /* center input + button horizontally */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* table */
+table.guess-table { width: 100%; border-collapse: collapse; margin-top: 16px; background: #fff; }
+.guess-table th, .guess-table td { padding: 8px 12px; text-align: center; border-bottom: 1px solid #ddd; }
+.guess-table thead th { border-bottom: 2px solid #333; }
+
+/* cell colors */
+.guess-table td.ok    { background: #a7e6a2 !important; }  /* green */
+.guess-table td.close { background: #fff59d !important; }  /* yellow */
+.guess-table td.mid   { background: #ffcc80 !important; }  /* orange */
+.guess-table td.far   { background: #ef9a9a !important; }  /* red */
+
+/* boxed rows: blue = older, orange = latest */
+.guess-table tbody tr.boxed_oldest td {
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+.guess-table tbody tr.boxed_oldest td:first-child {
+  border-left: 2px solid #333;
+  border-top-left-radius: 6px; border-bottom-left-radius: 6px;
+}
+.guess-table tbody tr.boxed_oldest td:last-child {
+  border-right: 2px solid #333;
+  border-top-right-radius: 6px; border-bottom-right-radius: 6px;
+}
+.guess-table tbody tr.boxed_latest td {
+  border-top: 2px solid #d6651a;
+  border-bottom: 2px solid #d6651a;
+}
+.guess-table tbody tr.boxed_latest td:first-child {
+  border-left: 2px solid #d6651a;
+  border-top-left-radius: 6px; border-bottom-left-radius: 6px;
+}
+.guess-table tbody tr.boxed_latest td:last-child {
+  border-right: 2px solid #d6651a;
+  border-top-right-radius: 6px; border-bottom-right-radius: 6px;
+}
+
+/* win button (injected) */
+#new-game-btn { margin-top: 20px; padding: 10px 16px; font-size: 16px; }
