@@ -4,6 +4,14 @@ body { font-family: system-ui, sans-serif; margin: 20px; background: #fafafa; }
 #guess-input { padding: 8px; font-size: 14px; width: 260px; content: center; }
 button { padding: 8px 12px; }
 
+#new-game-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 8px 16px;
+  font-size: 1rem;
+}
+
+
 h1 {
   margin: 0 0 12px;
   text-align: center;   /* center the title */
@@ -60,3 +68,42 @@ table.guess-table { width: 100%; border-collapse: collapse; margin-top: 16px; ba
 
 /* win button (injected) */
 #new-game-btn { margin-top: 20px; padding: 10px 16px; font-size: 16px; }
+/* wrapper controls dropdown positioning */
+.bar {
+  position: relative;
+  width: 360px;       /* pick your width */
+  margin: 0 auto;     /* center the wrapper */
+}
+
+/* make the input fill the wrapper width */
+#guess-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* the dropdown anchors to the wrapper, not the page */
+#suggestions-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);   /* 4px gap below the input */
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  z-index: 10;
+  max-height: 240px;       /* scroll if long */
+  overflow-y: auto;
+}
+
+/* suggestion items */
+#suggestions-box > div {
+  padding: 8px 10px;
+  cursor: pointer;
+  white-space: nowrap;     /* prevent wrapping if you prefer */
+}
+
+#suggestions-box > div:hover,
+#suggestions-box > div.active {
+  background: #f2f6ff;
+}

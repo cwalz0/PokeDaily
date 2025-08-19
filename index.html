@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>PokéDaily</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Do NOT load newapp.js here -->
 </head>
+
 <body>
   <h1>PokéDaily</h1>
+
   <div class="score">
-  Score: <span id="score-current">0</span>
-  &nbsp;|&nbsp;
-  Best: <span id="score-best">—</span>
-</div>
+    Score: <span id="score-current">0</span>
+    &nbsp;|&nbsp;
+    Best: <span id="score-best">—</span>
+  </div>
 
   <div class="bar">
-    <input id="guess-input" placeholder="Enter Pokémon name…" />
+    <input id="guess-input" placeholder="Enter Pokémon name…" autocomplete="off" />
+    <div id="suggestions-box" class="suggestions"></div>
   </div>
 
   <table class="guess-table">
@@ -31,7 +36,10 @@
       <!-- JS appends rows here -->
     </tbody>
   </table>
+  
 
+  <!-- Load once, at the end -->
   <script src="app.js"></script>
 </body>
+
 </html>
